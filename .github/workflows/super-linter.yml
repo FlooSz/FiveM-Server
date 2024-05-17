@@ -1,0 +1,96 @@
+# This workflow executes several linters on changed files based on languages used in your code base whenever
+# you push a code or open a pull request.
+#
+# You can adjust the behavior by modifying this file.
+# For more information, see:
+# https://github.com/github/super-linter
+
+name: CI tests
+
+on: [push, pull_request]
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        luaVersion:
+          - '5.1'
+          - '5.2'
+          - '5.3'
+          - '5.4'
+          - 'luajit'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leafo/gh-actions-lua@v9
+        with:
+          luaVersion: ${{ matrix.luaVersion }}
+      - uses: leafo/gh-actions-luarocks@v4
+      - uses: mymindstorm/setup-emsdk@v11
+      - uses: r-lib/actions/setup-pandoc@v1
+        with:
+          pandoc-version: '2.19.2'
+      - name: Install luaposix for fuzz test
+        run: |
+          luarocks install luaposix
+      - name: Build and test
+        run: |
+          make ci
+
+  windows:
+    runs-on: windows-2019
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mingw
+        run: |
+          choco install mingw
+      - name: Build and test executable
+        run: |
+          cd clib
+          make
+      - name: Test lua script
+        run: |
+          ./clib/lua-src/lua test.lua
+
+  macos:
+    runs-on: macos-11
+    strategy:
+      fail-fast: false
+      matrix:
+        luaVersion:
+          - '5.4'
+          - 'luajit'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-pandoc@v1
+        with:
+          pandoc-version: '2.19.2'
+      - uses: leafo/gh-actions-lua@v9
+        with:
+          luaVersion: ${{ matrix.luaVersion }}
+      - uses: leafo/gh-actions-luarocks@v4
+      - uses: mymindstorm/setup-emsdk@v11
+      - name: Install luaposix for fuzz test
+        run: |
+          luarocks install luaposix
+      - name: Build and test
+        run: |
+          make ci
+    
+  run-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code (Standardrun von GitHub Template)
+        uses: actions/checkout@v4
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: "main"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
