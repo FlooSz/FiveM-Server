@@ -1,1 +1,676 @@
-404: Not Found
+$engine: 3
+$onesync: on
+name: QBCore Framework
+version: 2.2.4
+author: JericoFx & Kakarot & Hamy
+description: An advanced FiveM RP framework including jobs, gangs, housing & more!
+
+tasks:
+  # Download Base Files
+  - action: download_github
+    src: https://github.com/HamburgSteilshoopRP/txAdminRecipe
+    ref: main
+    dest: ./tmp/qbcore
+
+  - action: move_path
+    src: ./tmp/qbcore/server.cfg
+    dest: ./server.cfg
+
+  - action: move_path
+    src: ./tmp/qbcore/myLogo.png
+    dest: ./myLogo.png
+
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/qbcore/qbcore.sql
+
+  # STANDALONE Resources
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    subpath: resources
+    dest: ./resources/[cfx-default]
+
+  - action: download_file
+    path: ./tmp/files/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v2.9.1/oxmysql.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/oxmysql.zip
+
+  - action: download_file
+    path: ./tmp/menuv.zip
+    url: https://github.com/ThymonA/menuv/releases/download/v1.4.1/menuv_v1.4.1.zip
+  - action: unzip
+    dest: ./resources/[standalone]/menuv
+    src: ./tmp/menuv.zip
+
+  - action: download_github
+    dest: ./resources/[standalone]/bob74_ipl
+    ref: master
+    src: https://github.com/HamburgSteilshoopRP/bob74_ipl
+
+  - action: download_github
+    dest: ./resources/[standalone]/safecracker
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/safecracker
+
+  - action: download_github
+    dest: ./resources/[standalone]/screenshot-basic
+    ref: master
+    src: https://github.com/citizenfx/screenshot-basic
+
+  - action: download_github
+    dest: ./resources/[standalone]/progressbar
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/progressbar
+
+  - action: download_github
+    dest: ./resources/[standalone]/interact-sound
+    ref: master
+    src: https://github.com/HamburgSteilshoopRP/interact-sound
+
+  - action: download_github
+    dest: ./resources/[standalone]/connectqueue
+    ref: master
+    src: https://github.com/HamburgSteilshoopRP/connectqueue
+
+  - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: master
+    src: https://github.com/HamburgSteilshoopRP/PolyZone
+
+  - action: download_github
+    dest: ./resources/[standalone]/LegacyFuel
+    ref: master
+    src: https://github.com/HamburgSteilshoopRP/LegacyFuel
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  # VOICE Resources
+  - action: download_github
+    dest: ./resources/[voice]/pma-voice
+    ref: main
+    src: https://github.com/AvarianKnight/pma-voice
+
+  - action: download_github
+    dest: ./resources/[voice]/qb-radio
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-radio
+
+  # MAPS
+  - action: download_github
+    dest: ./resources/[defaultmaps]/hospital_map
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/hospital_map
+
+  - action: download_github
+    dest: ./resources/[defaultmaps]/dealer_map
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/dealer_map
+
+  - action: download_github
+    dest: ./resources/[defaultmaps]/prison_map
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/prison_map
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  # Downloading QBCore Resources
+  - action: download_github
+    dest: ./resources/[qb]/qb-core
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-core
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-scoreboard
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-scoreboard
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-adminmenu
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-adminmenu
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-multicharacter
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-multicharacter
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-target
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-target
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-vehiclesales
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-vehiclesales
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-vehicleshop
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-vehicleshop
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-houserobbery
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-houserobbery
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-prison
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-prison
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-hud
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-hud
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-management
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-management
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-weed
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-weed
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-lapraces
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-lapraces
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-inventory
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-inventory
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-houses
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-houses
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-garages
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-garages
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-ambulancejob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-ambulancejob
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-radialmenu
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-radialmenu
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-crypto
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-crypto
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-weathersync
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-weathersync
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-policejob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-policejob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-smallresources
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-smallresources
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-truckerjob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-truckerjob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-shops
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-shops
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-log
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-log
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-teleport
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-teleport
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-tunerchip
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-tunerchip
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-clothing
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-clothing
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-taxi
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-taxi
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-ems
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-ems
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-drugs
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-drugs
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-storerobbery
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-storerobbery
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-banking
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-banking
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-bankrobbery
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-bankrobbery
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-mechanicjob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-mechanicjob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-traphouse
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-traphouse
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-gang
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-gang
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-taxijob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-taxijob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-scrapyard
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-scrapyard
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-jewelry
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-jewelry
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-burgershot
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-burgershot
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-diving
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-diving
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-garbagejob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-garbagejob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-busjob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-busjob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-hotdogjob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-hotdogjob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-pawnshop
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-pawnshop
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-recyclejob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-recyclejob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-pizzajob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-pizzajob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-garbagejob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-garbagejob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-busjob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-busjob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-hotdogjob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-hotdogjob
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-pawnshop
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-pawnshop
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-recyclejob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-recyclejob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-pizzajob
+    ref: main
+    src: https://github.com/HamburgSteilshoopRP/qb-pizzajob
+
+  - action: download_github
+    dest: ./resources/[qb]/um-hackerphone
+    ref: main
+    src: https://github.com/alp1x/um-hackerphone
+ 
+ - action: download_github
+    dest: ./resources/[qb]/qb-tsunami
+    ref: main
+    src: https://github.com/ActuallyStrez/qb-tsunami
+
+- action: download_github
+    dest: ./resources/[qb]/qb-electrician
+    ref: main
+    src: https://github.com/FaultyMatrix/qb-electrician 
+    
+- action: download_github
+    dest: ./resources/[qb]/wasabi_fishing
+    ref: main
+    src: https://github.com/wasabirobby/wasabi_fishing
+
+- action: download_github
+    dest: ./resources/[qb]/QBCore-Bobcat-Heist
+    ref: main
+    src: https://github.com/Doxthehuman/QBCore-Bobcat-Heist
+
+- action: download_github
+    dest: ./resources/[qb]/ren-businesses
+    ref: main
+    src: https://github.com/Rencikas/ren-businesses
+
+- action: waste_time # prevent github throttling
+    seconds: 10
+
+- action: download_github
+    dest: ./resources/[qb]/tr-blackmarket
+    ref: main
+    src: https://github.com/trclassic92/tr-blackmarket
+
+- action: download_github
+    dest: ./resources/[qb]/qb-gym
+    ref: main
+    src: https://github.com/marcostom32/qb-gym
+
+- action: download_github
+    dest: ./resources/[qb]/qb-sheriffjob
+    ref: main
+    src: https://github.com/DvScriptsSK/qb-sheriffjob
+
+- action: download_github
+    dest: ./resources/[qb]/qb-tequilalajob
+    ref: main
+    src: https://github.com/illwhyrin/qb-tequilalajob
+
+- action: download_github
+    dest: ./resources/[qb]/qb-speedcameras
+    ref: main
+    src: https://github.com/tom-osborne/qb-speedcameras
+
+- action: download_github
+    dest: ./resources/[qb]/QBCore-Yoga
+    ref: main
+    src: https://github.com/LumioStudio/QBCore-Yoga
+
+- action: download_github
+    dest: ./resources/[qb]/mycroft_cinema
+    ref: main
+    src: https://github.com/Mycroft-Studios/mycroft_cinema
+
+- action: download_github
+    dest: ./resources/[qb]/nc-petshop
+    ref: main
+    src: https://github.com/NaorNC/nc-petshop
+
+- action: download_github
+    dest: ./resources/[qb]/cx-tuners
+    ref: main
+    src: https://github.com/project-codex/cx-tuners
+
+- action: waste_time # prevent github throttling
+    seconds: 10
+
+- action: download_github
+    dest: ./resources/[qb]/cuchi_computer
+    ref: main
+    src: https://github.com/Cu-chi/cuchi_computer
+
+- action: download_github
+    dest: ./resources/[qb]/lotto
+    ref: main
+    src: https://github.com/Manliketjb/lotto
+
+- action: download_github
+    dest: ./resources/[qb]/mh-drivingteacherjob
+    ref: main
+    src: https://github.com/MaDHouSe79/mh-drivingteacherjob
+
+- action: download_github
+    dest: ./resources/[qb]/mt-stealfuel
+    ref: main
+    src: https://github.com/MT-Scripts/mt-stealfuel
+
+- action: download_github
+    dest: ./resources/[qb]/mt-beanmachine
+    ref: main
+    src: https://github.com/MT-Scripts/mt-beanmachine
+
+- action: download_github
+    dest: ./resources/[qb]/g-drugselling
+    ref: main
+    src: https://github.com/Giana/g-drugselling
+
+- action: download_github
+    dest: ./resources/[qb]/qb-mushroomfarm
+    ref: main
+    src: https://github.com/Ashenboy/qb-mushroomfarm
+
+- action: download_github
+    dest: ./resources/[qb]/possible-atm-robbery
+    ref: main
+    src: https://github.com/ashleyjrobinson/possible-atm-robbery
+
+- action: download_github
+    dest: ./resources/[qb]/tc-givecash
+    ref: main
+    src: https://github.com/TonyCapon3/tc-givecash
+
+- action: waste_time # prevent github throttling
+    seconds: 10
+
+- action: download_github
+    dest: ./resources/[qb]/mt-delivery
+    ref: main
+    src: https://github.com/MT-Scripts/mt-delivery
+
+- action: download_github
+    dest: ./resources/[qb]/qbr-ambulancejob
+    ref: main
+    src:  https://github.com/qbcore-redm-framework/qbr-ambulancejob
+
+- action: download_github
+    dest: ./resources/[qb]
+    ref: main
+    src: https://github.com/NevoSwissa/CL-ThermiteMission
+- action: download_github
+    dest: ./resources/[qb]/mad-gokarting
+    ref: main
+    src: https://github.com/fmsfdd/mad-gokarting
+
+- action: download_github
+    dest: ./resources/[qb]/ev-jobcenter
+    ref: main
+    src: https://github.com/EntityEvolution/ev-jobcenter 
+
+- action: download_github
+    dest: ./resources/[qb]/kibra-motels-basic
+    ref: main
+    src:  https://github.com/kibradev/kibra-motels-basic 
+
+- action: download_github
+    dest: ./resources/[qb]/crew-vapejob
+    ref: main
+    src: https://github.com/CrewDevelopement/crew-vapejob
+
+- action: download_github
+    dest: ./resources/[qb]/qb-yacht
+    ref: main
+    src: https://github.com/Margaritoo/qb-yacht 
+
+- action: unzip
+    src: ./[qb]/qb-yacht/qb-yacht.zip
+    dest: ./[qb]/qb-yacht
+    
+- action: download_github
+    dest: ./resources/[qb]/qb-bodycam
+    ref: main
+    src: https://github.com/Marshxan/qb-bodycam
+
+- action: waste_time # prevent github throttling
+    seconds: 10
+
+- action: download_github
+    dest: ./resources/[qb]/McDonalds
+    ref: main
+    src: https://github.com/MichyMedia/McDonalds
+
+- action: download_github
+    dest: ./resources/[qb]/jissuunnn-taco
+    ref: main
+    src:  https://github.com/Jissuunnn/jissuunnn-taco
+
+- action: download_github
+    dest: ./resources/[qb]/kloud-deliveries
+    ref: main
+    src:  https://github.com/kloudzxc/kloud-deliveries
+
+- action: download_github
+    dest: ./resources/[qb]/qb-coffeeshop
+    ref: main
+    src: https://github.com/oosayeroo/qb-coffeeshop
+
+- action: download_github
+    dest: ./resources/[qb]/qb-burgershot
+    ref: main
+    src: https://github.com/OfficiallyM/qb-burgershot
+
+- action: download_github
+    dest: ./resources/[qb]/gx-weedshop
+    ref: main
+    src: https://github.com/Galaxyy2/gx-weedshop
+
+- action: download_github
+    dest: ./resources/[qb]/forklift
+    ref: main
+    src: https://github.com/xDope7137/forklift
+
+- action: download_github
+    dest: ./resources/[qb]/vir_AutoPayBills
+    ref: main
+    src: https://github.com/Virus18sp/vir_AutoPayBills
+
+- action: download_github
+    dest: ./resources/[qb]/keep-vendingMachines
+    ref: main
+    src: https://github.com/swkeep/keep-vendingMachines
+
+- action: waste_time # prevent github throttling
+    seconds: 10
+
+- action: download_github
+    dest: ./resources/[qb]/tis-skydiving
+    ref: main
+    src: https://github.com/IllusionSquid/tis-skydiving
+
+- action: download_github
+    dest: ./resources/[qb]/qb-pizzajob
+    ref: main
+    src:  https://github.com/ku-development/qb-pizzajob
+
+- action: download_github
+    dest: ./resources/[qb]/qb-gopostaljob
+    ref: main
+    src: https://github.com/CallThatReal/qb-gopostaljob
+
+- action: download_github
+    dest: ./resources/[qb]/Gardener-Job
+    ref: main
+    src:  https://github.com/georgiaprahamov/Gardener-Job
+
+- action: download_github
+    dest: ./resources/[qb]/QBCore-GreenZones
+    ref: main
+    src: https://github.com/ZeusDevv/QBCore-GreenZones
+
+- action: download_github
+    dest: ./resources/[qb]/alv_lawyerjob
+    ref: main
+    src: https://github.com/alvwashere/alv_lawyerjob
+
+- action: download_github
+    dest: ./resources/[qb]/Firefighterjob
+    ref: main
+    src:  https://github.com/Ranjit-Develops/Firefighterjob
+
+- action: download_github
+    dest: ./resources/[qb]/randol_flighttest
+    ref: main
+    src: https://github.com/Randolio/randol_flighttest
