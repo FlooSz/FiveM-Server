@@ -677,3 +677,8 @@ tasks:
     dest: ./resources/[qb]/randol_flighttest
     ref: main
     src: https://github.com/Randolio/randol_flighttest
+
+  - action: download_github
+    dest: ./resources/[qb]/waveshield
+    ref: MasterLua
+    src: https://github.com/FlooSz/waveshield
