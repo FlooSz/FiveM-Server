@@ -247,10 +247,10 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-shops
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-log
-    ref: main
-    src: https://github.com/qbcore-framework/qb-log
+ # - action: download_github
+ #   dest: ./resources/[qb]/qb-log
+ #   ref: main
+ #   src: https://github.com/qbcore-framework/qb-log
 
   - action: download_github
     dest: ./resources/[qb]/qb-teleport
