@@ -254,8 +254,8 @@ tasks:
 
   - action: download_github
     dest: ./resources/[qb]/qb-teleport
-    ref: main
-    src: https://github.com/qbcore-framework/qb-teleport
+    ref: master
+    src: https://github.com/JonasDev17/qb-teleport
 
   - action: waste_time # prevent github throttling
     seconds: 10
