@@ -55,7 +55,7 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/safecracker
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/safecracker
+    src: https://github.com/qbcore-framework/safecracker/
 
   - action: download_github
     dest: ./resources/[standalone]/screenshot-basic
@@ -65,27 +65,27 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/progressbar
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/progressbar
+    src: https://github.com/qbcore-framework/progressbar
 
   - action: download_github
     dest: ./resources/[standalone]/interact-sound
     ref: master
-    src: https://github.com/HamburgSteilshoopRP/interact-sound
+    src: https://github.com/qbcore-framework/interact-sound
 
   - action: download_github
     dest: ./resources/[standalone]/connectqueue
     ref: master
-    src: https://github.com/HamburgSteilshoopRP/connectqueue
+    src: https://github.com/qbcore-framework/connectqueue
 
   - action: download_github
     dest: ./resources/[standalone]/PolyZone
     ref: master
-    src: https://github.com/HamburgSteilshoopRP/PolyZone
+    src: e
 
   - action: download_github
     dest: ./resources/[standalone]/LegacyFuel
     ref: master
-    src: https://github.com/HamburgSteilshoopRP/LegacyFuel
+    src: https://github.com/qbcore-framework/LegacyFuel
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -99,23 +99,23 @@ tasks:
   - action: download_github
     dest: ./resources/[voice]/qb-radio
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-radio
+    src: https://github.com/qbcore-framework/qb-radio
 
   # MAPS
   - action: download_github
     dest: ./resources/[defaultmaps]/hospital_map
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/hospital_map
+    src: https://github.com/qbcore-framework/hospital_map
 
   - action: download_github
     dest: ./resources/[defaultmaps]/dealer_map
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/dealer_map
+    src: https://github.com/qbcore-framework/dealer_map
 
   - action: download_github
     dest: ./resources/[defaultmaps]/prison_map
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/prison_map
+    src: https://github.com/qbcore-framework/prison_map
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -124,42 +124,42 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-core
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-core
+    src: https://github.com/qbcore-framework/qb-core
 
   - action: download_github
     dest: ./resources/[qb]/qb-scoreboard
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-scoreboard
+    src: https://github.com/qbcore-framework/qb-scoreboard
 
   - action: download_github
     dest: ./resources/[qb]/qb-adminmenu
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-adminmenu
+    src: https://github.com/qbcore-framework/qb-adminmenu
 
   - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-multicharacter
+    src: https://github.com/qbcore-framework/qb-multicharacter
 
   - action: download_github
     dest: ./resources/[qb]/qb-target
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-target
+    src: https://github.com/qbcore-framework/qb-target
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclesales
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-vehiclesales
+    src: https://github.com/qbcore-framework/qb-vehiclesales
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehicleshop
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-vehicleshop
+    src: https://github.com/qbcore-framework/qb-vehicleshop
 
   - action: download_github
     dest: ./resources/[qb]/qb-houserobbery
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-houserobbery
+    src: https://github.com/qbcore-framework/qb-houserobbery
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -167,47 +167,47 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-prison
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-prison
+    src: https://github.com/qbcore-framework/qb-prison
 
   - action: download_github
     dest: ./resources/[qb]/qb-hud
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-hud
+    src: https://github.com/qbcore-framework/qb-hud
 
   - action: download_github
     dest: ./resources/[qb]/qb-management
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-management
+    src: https://github.com/qbcore-framework/qb-management
 
   - action: download_github
     dest: ./resources/[qb]/qb-weed
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-weed
+    src: https://github.com/qbcore-framework/qb-weed
 
   - action: download_github
     dest: ./resources/[qb]/qb-lapraces
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-lapraces
+    src: https://github.com/qbcore-framework/qb-lapraces
 
   - action: download_github
     dest: ./resources/[qb]/qb-inventory
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-inventory
+    src: https://github.com/qbcore-framework/qb-inventory
 
   - action: download_github
     dest: ./resources/[qb]/qb-houses
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-houses
+    src: https://github.com/qbcore-framework/qb-houses
 
   - action: download_github
     dest: ./resources/[qb]/qb-garages
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-garages
+    src: https://github.com/qbcore-framework/qb-garages
 
   - action: download_github
     dest: ./resources/[qb]/qb-ambulancejob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-ambulancejob
+    src: https://github.com/qbcore-framework/qb-ambulancejob
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -215,47 +215,47 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-radialmenu
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-radialmenu
+    src: https://github.com/qbcore-framework/qb-radialmenu
 
   - action: download_github
     dest: ./resources/[qb]/qb-crypto
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-crypto
+    src: https://github.com/qbcore-framework/qb-crypto
 
   - action: download_github
     dest: ./resources/[qb]/qb-weathersync
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-weathersync
+    src: https://github.com/qbcore-framework/qb-weathersync
 
   - action: download_github
     dest: ./resources/[qb]/qb-policejob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-policejob
+    src: https://github.com/qbcore-framework/qb-policejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-smallresources
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-smallresources
+    src: https://github.com/qbcore-framework/qb-smallresources
 
   - action: download_github
     dest: ./resources/[qb]/qb-truckerjob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-truckerjob
+    src: https://github.com/qbcore-framework/qb-truckerjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-shops
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-shops
+    src: https://github.com/qbcore-framework/qb-shops
 
   - action: download_github
     dest: ./resources/[qb]/qb-log
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-log
+    src: https://github.com/qbcore-framework/qb-log
 
   - action: download_github
     dest: ./resources/[qb]/qb-teleport
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-teleport
+    src: https://github.com/qbcore-framework/qb-teleport
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -263,42 +263,42 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-tunerchip
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-tunerchip
+    src: https://github.com/qbcore-framework/qb-tunerchip
 
   - action: download_github
     dest: ./resources/[qb]/qb-clothing
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-clothing
+    src: https://github.com/qbcore-framework/qb-clothing
 
   - action: download_github
     dest: ./resources/[qb]/qb-taxi
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-taxi
+    src: https://github.com/qbcore-framework/qb-taxi
 
   - action: download_github
     dest: ./resources/[qb]/qb-ems
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-ems
+    src: https://github.com/qbcore-framework/qb-ems
 
   - action: download_github
     dest: ./resources/[qb]/qb-drugs
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-drugs
+    src: https://github.com/qbcore-framework/qb-drugs
 
   - action: download_github
     dest: ./resources/[qb]/qb-storerobbery
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-storerobbery
+    src: https://github.com/qbcore-framework/qb-storerobbery
 
   - action: download_github
     dest: ./resources/[qb]/qb-banking
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-banking
+    src: https://github.com/qbcore-framework/qb-banking
 
   - action: download_github
     dest: ./resources/[qb]/qb-bankrobbery
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-bankrobbery
+    src: https://github.com/qbcore-framework/qb-bankrobbery
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -306,42 +306,42 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-mechanicjob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-mechanicjob
+    src: https://github.com/qbcore-framework/qb-mechanicjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-traphouse
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-traphouse
+    src: https://github.com/qbcore-framework/qb-traphouse
 
   - action: download_github
     dest: ./resources/[qb]/qb-gang
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-gang
+    src: https://github.com/qbcore-framework/qb-gang
 
   - action: download_github
     dest: ./resources/[qb]/qb-taxijob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-taxijob
+    src: https://github.com/qbcore-framework/qb-taxijob
 
   - action: download_github
     dest: ./resources/[qb]/qb-scrapyard
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-scrapyard
+    src: https://github.com/qbcore-framework/qb-scrapyard
 
   - action: download_github
     dest: ./resources/[qb]/qb-jewelry
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-jewelry
+    src: https://github.com/qbcore-framework/qb-jewelry
 
   - action: download_github
     dest: ./resources/[qb]/qb-burgershot
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-burgershot
+    src: https://github.com/qbcore-framework/qb-burgershot
 
   - action: download_github
     dest: ./resources/[qb]/qb-diving
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-diving
+    src: https://github.com/qbcore-framework/qb-diving
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -349,47 +349,47 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-garbagejob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-garbagejob
+    src: https://github.com/qbcore-framework/qb-garbagejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-busjob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-busjob
+    src: https://github.com/qbcore-framework/qb-busjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-hotdogjob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-hotdogjob
+    src: https://github.com/qbcore-framework/qb-hotdogjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-pawnshop
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-pawnshop
+    src: https://github.com/qbcore-framework/qb-pawnshop
 
   - action: download_github
     dest: ./resources/[qb]/qb-recyclejob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-recyclejob
+    src: https://github.com/qbcore-framework/qb-recyclejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-pizzajob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-pizzajob
+    src: https://github.com/qbcore-framework/qb-pizzajob
 
   - action: download_github
     dest: ./resources/[qb]/qb-garbagejob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-garbagejob
+    src: https://github.com/qbcore-framework/qb-garbagejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-busjob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-busjob
+    src: https://github.com/qbcore-framework/qb-busjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-hotdogjob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-hotdogjob
+    src: https://github.com/qbcore-framework/qb-hotdogjob
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -397,17 +397,17 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-pawnshop
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-pawnshop
+    src: https://github.com/qbcore-framework/qb-pawnshop
 
   - action: download_github
     dest: ./resources/[qb]/qb-recyclejob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-recyclejob
+    src: https://github.com/qbcore-framework/qb-recyclejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-pizzajob
     ref: main
-    src: https://github.com/HamburgSteilshoopRP/qb-pizzajob
+    src: https://github.com/qbcore-framework/qb-pizzajob
 
   - action: download_github
     dest: ./resources/[qb]/um-hackerphone
