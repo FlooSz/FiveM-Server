@@ -395,11 +395,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-pawnshop
 
   - action: download_github
-    dest: ./resources/[qb]/qb-recyclejob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-recyclejob
-
-  - action: download_github
     dest: ./resources/[qb]/qb-pizzajob
     ref: main
     src: https://github.com/qbcore-framework/qb-pizzajob
