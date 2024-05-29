@@ -271,11 +271,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-clothing
 
   - action: download_github
-    dest: ./resources/[qb]/qb-taxi
-    ref: main
-    src: https://github.com/qbcore-framework/qb-taxi
-
-  - action: download_github
     dest: ./resources/[qb]/qb-ems
     ref: main
     src: https://github.com/qbcore-framework/qb-ems
