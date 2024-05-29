@@ -271,9 +271,9 @@ tasks:
     src: https://github.com/qbcore-framework/qb-clothing
 
   - action: download_github
-    dest: ./resources/[qb]/qb-ems
+    dest: ./resources/[qb]/qb-ambulancejob
     ref: main
-    src: https://github.com/qbcore-framework/qb-ems
+    src: https://github.com/qbcore-framework/qb-ambulancejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-drugs
