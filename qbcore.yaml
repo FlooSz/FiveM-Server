@@ -526,7 +526,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qbr-ambulancejob
     ref: main
-    src:  https://github.com/qbcore-redm-framework/qbr-ambulancejob
+    src: https://github.com/qbcore-redm-framework/qbr-ambulancejob
 
   - action: download_github
     dest: ./resources/[qb]
@@ -546,7 +546,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/kibra-motels-basic
     ref: main
-    src:  https://github.com/kibradev/kibra-motels-basic 
+    src: https://github.com/kibradev/kibra-motels-basic 
 
   - action: download_github
     dest: ./resources/[qb]/crew-vapejob
@@ -578,12 +578,12 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/jissuunnn-taco
     ref: main
-    src:  https://github.com/Jissuunnn/jissuunnn-taco
+    src: https://github.com/Jissuunnn/jissuunnn-taco
 
   - action: download_github
     dest: ./resources/[qb]/kloud-deliveries
     ref: main
-    src:  https://github.com/kloudzxc/kloud-deliveries
+    src: https://github.com/kloudzxc/kloud-deliveries
 
   - action: download_github
     dest: ./resources/[qb]/qb-coffeeshop
@@ -636,7 +636,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/Gardener-Job
     ref: main
-    src:  https://github.com/georgiaprahamov/Gardener-Job
+    src: https://github.com/georgiaprahamov/Gardener-Job
 
   - action: download_github
     dest: ./resources/[qb]/QBCore-GreenZones
@@ -651,7 +651,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/Firefighterjob
     ref: main
-    src:  https://github.com/Ranjit-Develops/Firefighterjob
+    src: https://github.com/Ranjit-Develops/Firefighterjob
 
   - action: download_github
     dest: ./resources/[qb]/randol_flighttest
