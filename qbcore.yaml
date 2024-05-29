@@ -677,3 +677,8 @@ tasks:
     dest: ./resources/[qb]/waveshield
     ref: MasterLua
     src: https://github.com/FlooSz/waveshield
+
+#  - action: download_github
+#    dest:
+#    ref: main
+#    src: https://github.com/D40G/ESX-TO-QBCore-manual
