@@ -324,9 +324,9 @@ tasks:
     src: https://github.com/qbcore-framework/qb-scrapyard
 
   - action: download_github
-    dest: ./resources/[qb]/qb-jewelry
+    dest: ./resources/[qb]/qb-jewelery
     ref: main
-    src: https://github.com/qbcore-framework/qb-jewelry
+    src: https://github.com/qbcore-framework/qb-jewelery
 
   - action: download_github
     dest: ./resources/[qb]/qb-burgershot
