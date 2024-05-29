@@ -367,11 +367,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-recyclejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-pizzajob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-pizzajob
-
-  - action: download_github
     dest: ./resources/[qb]/qb-garbagejob
     ref: main
     src: https://github.com/qbcore-framework/qb-garbagejob
