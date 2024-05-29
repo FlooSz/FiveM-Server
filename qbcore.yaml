@@ -308,10 +308,10 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-traphouse
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-gang
-    ref: main
-    src: https://github.com/qbcore-framework/qb-gang
+#  - action: download_github
+#    dest: ./resources/[qb]/qb-gang
+#    ref: main
+#    src: https://github.com/qbcore-framework/qb-gang
 
   - action: download_github
     dest: ./resources/[qb]/qb-taxijob
