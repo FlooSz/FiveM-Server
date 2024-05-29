@@ -263,7 +263,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-tunerchip
     ref: main
-    src: https://github.com/qbcore-framework/qb-tunerchip
+    src: https://github.com/Qbox-project/qbx_tunerchip
 
   - action: download_github
     dest: ./resources/[qb]/qb-clothing
@@ -482,10 +482,10 @@ tasks:
     ref: main
     src: https://github.com/NaorNC/nc-petshop
 
-  - action: download_github
-    dest: ./resources/[qb]/cx-tuners
-    ref: main
-    src: https://github.com/project-codex/cx-tuners
+#  - action: download_github
+#    dest: ./resources/[qb]/cx-tuners
+#    ref: main
+#    src: https://github.com/project-codex/cx-tuners
 
   - action: waste_time # prevent github throttling
     seconds: 10
