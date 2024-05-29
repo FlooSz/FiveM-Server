@@ -331,7 +331,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-burgershot
     ref: main
-    src: https://github.com/qbcore-framework/qb-burgershot
+    src: https://github.com/OfficiallyM/qb-burgershot
 
   - action: download_github
     dest: ./resources/[qb]/qb-diving
