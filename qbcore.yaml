@@ -395,11 +395,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-pawnshop
 
   - action: download_github
-    dest: ./resources/[qb]/qb-pizzajob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-pizzajob
-
-  - action: download_github
     dest: ./resources/[qb]/um-hackerphone
     ref: main
     src: https://github.com/alp1x/um-hackerphone
