@@ -1,9 +1,9 @@
 $engine: 3
 $onesync: on
-name: QBCore Framework
+name: Cob n Robbers Testserver
 version: 2.2.4
-author: JericoFx & Kakarot & Hamy
-description: An advanced FiveM RP framework including jobs, gangs, housing & more!
+author: FlooSz/WirklichFloo/WirklichMacher
+description: CnR 
 
 tasks:
   # Download Base Files
@@ -21,9 +21,9 @@ tasks:
     dest: ./myLogo.png
 
   # Prepare Database
-#  - action: connect_database
-#  - action: query_database
-#    file: ./tmp/qbcore/qbcore.sql
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/qbcore/qbcore.sql
 
   # STANDALONE Resources
   - action: download_github
@@ -91,15 +91,15 @@ tasks:
     seconds: 10
 
   # VOICE Resources
-  - action: download_github
-    dest: ./resources/[voice]/pma-voice
-    ref: main
-    src: https://github.com/AvarianKnight/pma-voice
+#  - action: download_github
+#    dest: ./resources/[voice]/pma-voice
+#    ref: main
+#    src: https://github.com/AvarianKnight/pma-voice
 
-  - action: download_github
-    dest: ./resources/[voice]/qb-radio
-    ref: main
-    src: https://github.com/qbcore-framework/qb-radio
+#  - action: download_github
+#    dest: ./resources/[voice]/qb-radio
+#    ref: main
+#    src: https://github.com/qbcore-framework/qb-radio
 
   # MAPS
   - action: download_github
@@ -131,10 +131,10 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-scoreboard
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-adminmenu
-    ref: main
-    src: https://github.com/qbcore-framework/qb-adminmenu
+#  - action: download_github
+#    dest: ./resources/[qb]/qb-adminmenu
+#    ref: main
+#    src: https://github.com/qbcore-framework/qb-adminmenu
 
   - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
@@ -404,10 +404,10 @@ tasks:
     ref: main
     src: https://github.com/FaultyMatrix/qb-electrician 
     
-  - action: download_github
-    dest: ./resources/[qb]/wasabi_fishing
-    ref: main
-    src: https://github.com/wasabirobby/wasabi_fishing
+#  - action: download_github
+#    dest: ./resources/[qb]/wasabi_fishing
+#    ref: main
+#    src: https://github.com/wasabirobby/wasabi_fishing
 
   - action: download_github
     dest: ./resources/[qb]/QBCore-Bobcat-Heist
@@ -470,10 +470,10 @@ tasks:
   - action: waste_time # prevent github throttling
     seconds: 10
 
-  - action: download_github
-    dest: ./resources/[qb]/cuchi_computer
-    ref: main
-    src: https://github.com/Cu-chi/cuchi_computer
+ # - action: download_github
+ #   dest: ./resources/[qb]/cuchi_computer
+ #   ref: main
+ #   src: https://github.com/Cu-chi/cuchi_computer
 
   - action: download_github
     dest: ./resources/[qb]/lotto
@@ -495,10 +495,10 @@ tasks:
     ref: main
     src: https://github.com/MT-Scripts/mt-beanmachine
 
-  - action: download_github
-    dest: ./resources/[qb]/g-drugselling
-    ref: main
-    src: https://github.com/Giana/g-drugselling
+ # - action: download_github
+ #   dest: ./resources/[qb]/g-drugselling
+ #   ref: main
+ #   src: https://github.com/Giana/g-drugselling
 
   - action: download_github
     dest: ./resources/[qb]/qb-mushroomfarm
@@ -663,7 +663,7 @@ tasks:
     ref: MasterLua
     src: https://github.com/FlooSz/waveshield
 
-#  - action: download_github
-#    dest:
-#    ref: main
-#    src: https://github.com/D40G/ESX-TO-QBCore-manual
+  - action: download_github
+    dest: ./resources/[qb]/Cops-n-Robbers
+    ref: master
+    src: https://github.com/rhapidfyre/Cops-n-Robbers
